@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Blazey | Full-Stack Developer & Creative</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for elegant look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Mary<span>Blazey</span></h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header id="home" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h3>✨ Welcome!</h3>
+                <h1>I'm Mary Blazey</h1>
+                <p class="tagline">Full-Stack Developer | Creative Problem Solver</p>
+                <p style="margin-bottom: 2rem; font-size: 1rem; line-height: 1.8;">I craft elegant digital solutions that blend technical excellence with user-centered design.</p>
+                <a href="#projects" class="btn">Explore My Work</a>
+            </div>
+            <div class="hero-image">
+                <!-- Placeholder for professional photo -->
+                <img src="https://placehold.co/400x400/d63384/ffffff?text=Mary+Blazey" alt="Professional Photo">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="bio">
+                    <p>I'm a passionate full-stack developer with a unique blend of software and hardware expertise. I love creating elegant, efficient solutions that solve real problems. My approach combines technical precision with a keen eye for design and user experience.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or brainstorming creative digital experiences.</p>
+                    <a href="resume.pdf" download class="btn-alt">↓ Download Resume</a>
+                </div>
+                <div class="skills">
+                    <h3>Core Skills</h3>
+                    <ul class="skills-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>SQL</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3>💼 Inventory System</h3>
+                    <p>A full-stack SQL-based inventory management system designed for local businesses. Features real-time tracking, secure authentication, and intuitive dashboard.</p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                        <a href="#" class="demo">Demo</a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3>🎨 Creative Portfolio</h3>
+                    <p>A responsive portfolio built with modern CSS Flexbox and Grid systems. Showcasing clean design principles and smooth user interactions.</p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                        <a href="#" class="demo">Live</a>
+                    </div>
+                </div>
+                
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <h3>🚀 Web Application</h3>
+                    <p>A modern web application demonstrating advanced JavaScript concepts, API integration, and responsive design patterns.</p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank">GitHub</a>
+                        <a href="#" class="demo">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <!-- Form Validation via JS -->
+                <form id="contactForm">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                    <p id="form-status"></p>
+                </form>
+
+                <div class="contact-links">
+                    <a href="blazeymary3@gmail.com" class="contact-btn">Email Me</a>
+                    <a href="https://linkedin.com" target="_blank" class="contact-btn">LinkedIn</a>
+                    <a href="https://github.com" target="_blank" class="contact-btn">GitHub</a>
+                    <a href="#" class="contact-btn portal">Student Portal</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 mary blazey. Built with HTML, CSS, & JS.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
