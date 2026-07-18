@@ -18,7 +18,7 @@ const stats = [
 ]
 
 const socials = [
-  { icon: Github,   href: 'https://github.com',   label: 'GitHub' },
+  { icon: Github,   href: 'https://github.com/maryblazey',   label: 'GitHub' },
   { icon: Linkedin, href: 'https://linkedin.com',  label: 'LinkedIn' },
   { icon: Mail,     href: 'mailto:blazeymary3@gmail.com', label: 'Email' },
 ]
