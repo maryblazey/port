@@ -6,7 +6,7 @@ import './Contact.css'
 const contactInfo = [
   { icon: MapPin, label: 'Location',  value: 'Nairobi, Kenya' },
   { icon: Mail,   label: 'Email',     value: 'blazeymary3@gmail.com', href: 'mailto:blazeymary3@gmail.com' },
-  { icon: Phone,  label: 'Phone',     value: '+254 700 000 000',       href: 'tel:+254700000000' },
+  { icon: Phone,  label: 'Phone',     value: '+254 740 749 434',       href: 'tel:+254740749434' },
 ]
 
 const socials = [
@@ -34,13 +34,20 @@ export default function Contact() {
       return
     }
     setLoading(true)
-    // Simulate send
+    
+    // Format the message for WhatsApp
+    const whatsappNumber = "254740749434"
+    const text = `Hello Mary! My name is ${name} (${email}).\n\nSubject: ${subject}\n\nMessage:\n${message}`
+    const encodedText = encodeURIComponent(text)
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`
+    
+    // Simulate short loading then open WhatsApp
     setTimeout(() => {
       setLoading(false)
-      setStatus('success')
+      window.open(whatsappUrl, '_blank')
       setForm({ name: '', email: '', subject: '', message: '' })
-      setTimeout(() => setStatus(null), 5000)
-    }, 1500)
+      setStatus(null)
+    }, 800)
   }
 
   return (
@@ -174,7 +181,7 @@ export default function Contact() {
               ) : (
                 <>
                   <Send size={16} />
-                  Send Message
+                  Send via WhatsApp
                 </>
               )}
             </button>
