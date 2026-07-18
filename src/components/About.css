@@ -1,0 +1,236 @@
+/* ===== About ===== */
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-header {
+  margin-bottom: 3.5rem;
+}
+
+/* Grid layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Bio */
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-bio p {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  line-height: 1.85;
+}
+
+.about-bio p strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Highlights */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem;
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--emerald-400);
+}
+
+.highlight-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.highlight-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Stats */
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.about-stat-card {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.about-stat-value {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.about-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Skills */
+.skills-section {
+  margin-bottom: 1.5rem;
+}
+
+.skills-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.skill-item {}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skill-level {
+  font-size: 0.8rem;
+  color: var(--emerald-400);
+  font-weight: 600;
+}
+
+.skill-track {
+  height: 5px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--emerald-600), var(--emerald-400));
+  border-radius: 99px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.4);
+}
+
+/* Tech chips */
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-chip {
+  background: rgba(52, 211, 153, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.15);
+  color: var(--emerald-400);
+  padding: 0.35rem 0.8rem;
+  border-radius: 99px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-chip:hover {
+  background: rgba(52, 211, 153, 0.15);
+  border-color: var(--emerald-400);
+}
+
+/* Scroll reveal */
+.about .about-header,
+.about .about-grid {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.about.visible .about-header {
+  opacity: 1;
+  transform: none;
+}
+
+.about.visible .about-grid {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.15s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
