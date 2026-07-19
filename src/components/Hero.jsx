@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Github, Linkedin, Mail, ExternalLink, Download, ArrowRight } from 'lucide-react'
 import { useTypewriter } from '../hooks/useScrollAnimation'
-import profileImg from '../assets/profile.png'
+import profileImg from '../assets/profile.jpeg'
 import './Hero.css'
 
 const ROLES = [
