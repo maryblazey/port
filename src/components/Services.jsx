@@ -44,7 +44,7 @@ export default function Services() {
         <div className="services-header">
           <span className="section-label">Services</span>
           <h2 className="section-title">
-            What I can do <span>for you</span>
+            What I can do <span>for you...</span>
           </h2>
           <p className="services-sub">
             End-to-end digital solutions tailored to your goals — from design to deployment.
